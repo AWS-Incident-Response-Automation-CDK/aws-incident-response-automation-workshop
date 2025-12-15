@@ -1,40 +1,26 @@
 ---
-title: "Báo cáo thực tập"
-date: "2025-09-09"
-weight: 1
+title: "Workshop"
+date: "2000-01-01"
+weight: 05
 chapter: false
+pre: " <b>  </b> "
 ---
 
-# Báo cáo thực tập
-### Thông tin sinh viên:
-&emsp; **Họ và tên:** Huỳnh An Khương
+# Thiết lập hệ thống phản hồi sự cố tự động và pháp y số trên AWS
 
-&emsp; **Số điện thoại:** 0964440342
+#### Tổng quan
 
-&emsp; **Email:** huynhankhuong0511@gmail.com
+Hướng dẫn này cung cấp quy trình từng bước hoàn chỉnh để triển khai hệ thống phản hồi sự cố và điều tra số (forensics) tự động của chúng tôi trên AWS. Hệ thống này tận dụng **CloudTrail**, **GuardDuty**, **VPC Flow Logs**, **Kinesis Firehose**, **Glue**, **Athena**, và **Lambda** functions được điều phối bởi **AWS Step Functions** để tự động phát hiện, phân tích và cách ly các tài nguyên bị xâm phạm như EC2 instances và IAM users. Khả năng điều tra log sâu hơn được bổ sung bằng cách thiết lập **Security Dashboard** lưu trữ trên S3 và truy cập qua **CloudFront** và **Cognito**, truy vấn log sử dụng **API Gateway** và **Lambda**.
 
-&emsp; **Trường:** Trường Đại học FPT Thành Phố Hồ Chí Minh
-
-&emsp; **Ngành:** Công nghệ thông tin
-
-&emsp; **Lớp:** AWS082025
-
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
-
-&emsp; **Vị trí thực tập:** FCJ Cloud Intern
-
-&emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 12/12/2025
-
-![Your profile picture](/images/KhuongAnhThe.jpg)
-
-
-
-### Nội dung báo cáo
-
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Các bài blogs đã dịch](3-BlogsTranslated/)
-4.  [Các events đã tham gia](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+#### Nội dung
+1. [Tổng quan](1-Workshop-overview/)
+2. [Điều kiện tiên quyết](2-Prerequiste/)
+3. [Giai đoạn 1: Thiết lập nền tảng](3-Foundation-Setup/)
+4. [Giai đoạn 2: Thiết lập giám sát](4-Monitoring-Setup/)
+5. [Giai đoạn 3: Thiết lập xử lý](5-Processing-Setup/)
+6. [Giai đoạn 4: Thiết lập tự động hóa](6-Automation-Setup/)
+7. [Giai đoạn 5: Thiết lập Dashboard](7-Dashboard-Setup/)
+8. [Kiểm tra](8-Verify-Setup/)
+9. [Sử dụng CDK](9-Use-CDK/)
+10. [Dọn dẹp](10-Cleanup/)
+11. [Phụ lục](11-Appendices/)
