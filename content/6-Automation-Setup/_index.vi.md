@@ -58,21 +58,21 @@ pre : " <b> 6. </b> "
 
   - **Handler**: `parse_findings.lambda_handler`
   - **Role**: `ParseFindingsLambdaServiceRole`
-  - **Code**: [parse-findings](../11-Appendices/11-Appendices/11.6-parse-findings)
+  - **Code**: [parse-findings](../11-Appendices/11.6-parse-findings)
 
 ### ir-isolate-ec2-lambda
 
   - **Handler**: `isolate_ec2.lambda_handler`
   - **Role**: `IsolateEC2LambdaServiceRole`
   - **Env**: `ISOLATION_SG_ID=sg-XXXXXXX` (từ bước 12)
-  - **Code**: [isolate-ec2](../11-Appendices/11-Appendices/11.7-isolate-ec2)
+  - **Code**: [isolate-ec2](../11-Appendices/11.7-isolate-ec2)
 
 ### ir-quarantine-iam-lambda
 
   - **Handler**: `quarantine_iam.lambda_handler`
   - **Role**: `QuarantineIAMLambdaServiceRole`
   - **Env**: `QUARANTINE_POLICY_ARN=arn:aws:iam::ACCOUNT_ID:policy/IrQuarantineIAMPolicy`
-  - **Code**: [quarantine-iam](../11-Appendices/11-Appendices/11.8-quarantine-iam)
+  - **Code**: [quarantine-iam](../11-Appendices/11.8-quarantine-iam)
 
 ### ir-alert-dispatch
 
@@ -80,7 +80,7 @@ pre : " <b> 6. </b> "
   - **Role**: `AlertDispatchLambdaServiceRole`
   - **Env**: `SENDER_EMAIL`, `RECIPIENT_EMAIL`, `SLACK_WEBHOOK_URL`
   - **Add SNS trigger**: Topic `IncidentResponseAlerts`
-  - **Code**: [alert-dispatch](../11-Appendices/11-Appendices/11.9-alert-dispatch)
+  - **Code**: [alert-dispatch](../11-Appendices/11.9-alert-dispatch)
 
 ## Cập nhật SNS Topic Subscription
 
