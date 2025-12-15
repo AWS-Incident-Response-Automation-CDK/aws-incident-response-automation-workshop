@@ -1,4 +1,4 @@
-baseURL = "https://veljg.github.io/AWS-Worklog/"
+baseURL = "https://aws-incident-response-automation-cdk.github.io/aws-incident-response-automation-workshop/"
 relativeURLs = true
 canonifyURLs = true
 
