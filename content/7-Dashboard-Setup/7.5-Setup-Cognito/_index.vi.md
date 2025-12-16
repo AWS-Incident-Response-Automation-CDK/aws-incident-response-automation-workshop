@@ -23,7 +23,7 @@ Trong hướng dẫn này, bạn sẽ tạo một Cognito user pool để đăng
      - Options for sign-in identifiers: **Email** và **Username**
      - Self-registration: **Enable self-registration**
      - Required attributes for sign-up: **email**
-     - Add a return URL: Vào Cloudfront, chọn cái bạn vừa tạo và copy **Distribution domain name** và dán vào đây (Ví dụ: `https://d2bvvvpr6s4eyd.cloudfront.net`)
+     - Add a return URL: Vào CloudFront, chọn cái bạn vừa tạo và copy **Distribution domain name** và dán vào đây (Ví dụ: `https://d2bvvvpr6s4eyd.cloudfront.net`)
      - Nhấn **Create user directory**
      - Sau khi tạo, cuộn xuống và nhấn **Go to overview**
 

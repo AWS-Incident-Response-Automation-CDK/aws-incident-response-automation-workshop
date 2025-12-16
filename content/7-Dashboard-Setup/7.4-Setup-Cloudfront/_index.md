@@ -1,19 +1,19 @@
 ---
-title : "Cloudfront Setup"
+title : "CloudFront Setup"
 date: "2000-01-01"
 weight : 04
 chapter : false
 pre : " <b> 7.4. </b> "
 ---
-In this guide, you will setup a Cloudfront for cache, routing and web accessing.
+In this guide, you will setup a CloudFront for cache, routing and web accessing.
 
-## Create Cloudfront Distribution
+## Create CloudFront Distribution
 
-1. **Open the Cloudfront Console**
+1. **Open the CloudFront Console**
    - Navigate to https://console.aws.amazon.com/cloudfront/
-   - Or: AWS Management Console → Services → Cloudfront
+   - Or: AWS Management Console → Services → CloudFront
 
-   ![Screenshot: Cloudfront Console Homepage](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create.png)
+   ![Screenshot: CloudFront Console Homepage](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create.png)
 
 2. **Create Distribution**:
    - Click the **Create distribution** button
@@ -26,15 +26,15 @@ In this guide, you will setup a Cloudfront for cache, routing and web accessing.
      - Enable security: Use this if you choose **free plan**
      - Review and click **Create distribution**
 
-    ![Screenshot: Cloudfront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_button.png)
+    ![Screenshot: CloudFront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_button.png)
 
     -----
 
-    ![Screenshot: Cloudfront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_1.png)
+    ![Screenshot: CloudFront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_1.png)
 
     -----
 
-    ![Screenshot: Cloudfront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_2.png)
+    ![Screenshot: CloudFront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_2.png)
 
     -----
 
@@ -42,23 +42,23 @@ In this guide, you will setup a Cloudfront for cache, routing and web accessing.
 
     -----
 
-    ![Screenshot: Cloudfront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_4.png)
+    ![Screenshot: CloudFront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_4.png)
 
     -----
 
-    ![Screenshot: Cloudfront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_5.png)
+    ![Screenshot: CloudFront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_5.png)
 
 3. **General setting**:
-   - After creation complete, on your Cloudfront General tab click on **Edit**
+   - After creation complete, on your CloudFront General tab click on **Edit**
    - At the **Default root object** enter **index.html**
    - Description: **Static Dashboard Distribution**
    - Click **Save change**
 
-    ![Screenshot: Cloudfront Distribution general setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_general_edit.png)
+    ![Screenshot: CloudFront Distribution general setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_general_edit.png)
 
     -----
 
-    ![Screenshot: Cloudfront Distribution general setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_root_object.png)
+    ![Screenshot: CloudFront Distribution general setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_root_object.png)
 
 4. **Create API Gateway origin**:
    - Click **Origins** on the menu tabs
@@ -92,7 +92,7 @@ In this guide, you will setup a Cloudfront for cache, routing and web accessing.
 
     ![Screenshot: Cloudfront Distribution behavior setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_behavior_create_setting.png)
 
-6. **Update S3 policy to work with Cloudfront**:
+6. **Update S3 policy to work with CloudFront**:
    - Click **Origins** on the menu tabs, choose the **s3-static-dashboard** origin name
    - Click **Edit**
    - At **Origin access controll** section press **Go to S3 bucket permissions**

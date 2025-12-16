@@ -1,17 +1,17 @@
 ---
-title : "Cài đặt Cloudfront"
+title : "Cài đặt CloudFront"
 date: "2000-01-01"
 weight : 04
 chapter : false
 pre : " <b> 7.4. </b> "
 ---
-Trong hướng dẫn này, bạn sẽ cài đặt một Cloudfront để cache, định tuyến và truy cập web.
+Trong hướng dẫn này, bạn sẽ cài đặt một CloudFront để cache, định tuyến và truy cập web.
 
-## Tạo Cloudfront Distribution
+## Tạo CloudFront Distribution
 
-1. **Mở Cloudfront Console**
+1. **Mở CloudFront Console**
    - Điều hướng tới https://console.aws.amazon.com/cloudfront/
-   - Hoặc: AWS Management Console → Services → Cloudfront
+   - Hoặc: AWS Management Console → Services → CloudFront
 
    ![Screenshot: Cloudfront Console Homepage](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create.png)
 
@@ -49,7 +49,7 @@ Trong hướng dẫn này, bạn sẽ cài đặt một Cloudfront để cache, 
     ![Screenshot: Cloudfront Distribution create setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_create_step_5.png)
 
 3. **Cài đặt chung (General setting)**:
-   - Sau khi tạo xong, trên tab General của Cloudfront nhấn vào **Edit**
+   - Sau khi tạo xong, trên tab General của CloudFront nhấn vào **Edit**
    - Tại **Default root object** nhập **index.html**
    - Description: **Static Dashboard Distribution**
    - Nhấn **Save change**
@@ -92,7 +92,7 @@ Trong hướng dẫn này, bạn sẽ cài đặt một Cloudfront để cache, 
 
     ![Screenshot: Cloudfront Distribution behavior setting](/images/5-Workshop/5.7-Dashboard-setup/5.7.4-cloudfront-setup/cloudfront_behavior_create_setting.png)
 
-6. **Cập nhật S3 policy để hoạt động với Cloudfront**:
+6. **Cập nhật S3 policy để hoạt động với CloudFront**:
    - Nhấn **Origins** trên các tab menu, chọn tên origin **s3-static-dashboard**
    - Nhấn **Edit**
    - Tại phần **Origin access controll** nhấn **Go to S3 bucket permissions**

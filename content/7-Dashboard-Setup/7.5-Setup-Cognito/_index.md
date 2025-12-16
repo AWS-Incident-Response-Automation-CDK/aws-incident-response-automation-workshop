@@ -23,7 +23,7 @@ In this guide, you will create a Cognito user pool for dashboard login.
      - Options for sign-in identifiers: **Email** and **Username**
      - Self-registration: **Enable self-registration**
      - Required attributes for sign-up: **email**
-     - Add a return URL: Go to Cloudfront, choose the one that you just created and copy the **Distribution domain name** and paste it here (Example: `https://d2bvvvpr6s4eyd.cloudfront.net`)
+     - Add a return URL: Go to CloudFront, choose the one that you just created and copy the **Distribution domain name** and paste it here (Example: `https://d2bvvvpr6s4eyd.cloudfront.net`)
      - Click **Create user directory**
      - After create, scroll down and click **Go to overview**
 
