@@ -15,5 +15,5 @@ to routing api to Lambda and CloudFront to caching and access to the web using i
 - [Setup S3](7.1-Setup-S3/)
 - [Setup Lambda](7.2-Setup-Lambda/)
 - [Setup API Gateway](7.3-Setup-API-Gateway/)
-- [Setup Cloudfront](7.4-Setup-CloudFront/)
+- [Setup CloudFront](7.4-Setup-CloudFront/)
 - [Setup Cognito](7.5-Setup-Cognito/)
