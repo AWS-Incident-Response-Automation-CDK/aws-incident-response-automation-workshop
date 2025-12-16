@@ -11,21 +11,12 @@ Hướng dẫn này đảm bảo bạn hủy bỏ (decommission) chính xác t�
 
 ### Giai đoạn 1: Dọn dẹp dữ liệu thủ công (Trước khi CDK Destroy)
 
-CDK tự động xóa hầu hết các tài nguyên nhưng không xóa nội dung trong S3 buckets. Bạn phải **làm trống nội dung của các buckets này** trước khi chạy lệnh `cdk destroy`.
-
-| Tên Resource | Mục đích | Hành động yêu cầu |
-| :--- | :--- | :--- |
-| **`incident-response-log-list-bucket`** | Nguồn Log Chính | **Làm trống nội dung** |
-| **`processed-cloudwatch-logs`** | ETL Destination | **Làm trống nội dung** |
-| **`processed-guardduty-findings`** | ETL Destination | **Làm trống nội dung** |
-| **`processed-cloudtrail-logs`** | ETL Destination | **Làm trống nội dung** |
-| **`athena-query-results`** | Kết quả truy vấn Athena | **Làm trống nội dung** |
-| **`aws-incident-response-automation-dashboard`** | React Dashboard S3 Bucket | **Làm trống nội dung** |
+CDK tự động xóa hầu hết các tài nguyên nhưng không xóa nội dung trong S3 buckets. Tất cả bucket lưu log sẽ được giữ lại trừ bucket `aws-incident-response-automation-dashboard`. Bucket`aws-incident-response-automation-dashboard` buộc phải làm trống nội dung trước khi tiến hành CDK `destroy`.
 
 **Hướng dẫn làm trống Buckets:**
 
 1.  Mở **Amazon S3 Console** trong trình duyệt của bạn.
-2.  Đối với **mỗi** buckets được liệt kê ở trên (tìm tên dựa trên AWS Account ID và Region của bạn):
+2.  Đối bucket `aws-incident-response-automation-dashboard`:
     * Nhấn vào tên bucket.
     * Điều hướng đến tab **"Objects"**.
     * Nhấn nút **"Empty"**.
@@ -55,7 +46,7 @@ Bước này sử dụng CDK CLI để phá hủy tất cả các tài nguyên �
 Bước này giải quyết việc dọn dẹp thủ công các tài nguyên còn sót lại.
 
 1.  **Xóa các S3 Buckets còn lại**
-    * Lệnh `cdk destroy` sẽ xóa các S3 buckets **trống**. Nếu còn sót lại bucket nào (do kiểm tra cuối cùng hoặc bảo vệ dịch vụ), hãy xóa chúng ngay bây giờ qua S3 Console.
+    * Lệnh `cdk destroy` sẽ xóa các S3 buckets **trống**. Nếu có nhu cầu xóa các buckets lưu log, hãy làm trống và xóa chúng ngay bây giờ qua S3 Console.
 
 2.  **Vô hiệu hóa Amazon GuardDuty**
     * Vào **GuardDuty Console** → **Settings** → **General**.

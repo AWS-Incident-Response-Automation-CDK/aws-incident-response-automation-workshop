@@ -11,21 +11,12 @@ This guide ensures you correctly decommission all resources provisioned by the A
 
 ### Phase 1: Manual Data Cleanup (Before CDK Destroy)
 
-The CDK automatically deletes most resources failed in deleting content from S3 buckets. You must **empty the contents of these buckets** before running the `cdk destroy` command.
-
-| Resource Name | Purpose | Action Required |
-| :--- | :--- | :--- |
-| **`incident-response-log-list-bucket`** | Primary Log Source | **Empty Contents** |
-| **`processed-cloudwatch-logs`** | ETL Destination | **Empty Contents** |
-| **`processed-guardduty-findings`** | ETL Destination | **Empty Contents** |
-| **`processed-cloudtrail-logs`** | ETL Destination | **Empty Contents** |
-| **`athena-query-results`** | Athena Query Results | **Empty Contents** |
-| **`aws-incident-response-automation-dashboard`** | React Dashboard S3 Bucket | **Empty Contents** |
+The CDK automatically deletes most resources but fails in deleting content from S3 Buckets. All log buckets are set to retain after destroying, except for `aws-incident-response-automation-dashboard` bucket. You must empty the contents of the `aws-incident-response-automation-dashboard` bucket before running the `cdk-destroy` command
 
 **Instructions for Emptying Buckets:**
 
 1.  Open the **Amazon S3 Console** in your browser.
-2.  For **each** of the buckets listed above (look for the names based on your AWS Account ID and Region):
+2.  For the `aws-incident-response-automation-dashboard` bucket:
     * Click on the bucket name.
     * Navigate to the **"Objects"** tab.
     * Click the **"Empty"** button.
